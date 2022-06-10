@@ -11,4 +11,4 @@ _Here are the characteristics of the project:_
 - We also use styled components and CSS.
 - Pusher is used since MongoDB is not a real-time database like Firebase, and you want the posts to reflect the moment someone hits the submit.
 
-In this project, you build a social media app that has Google authentication. The app’s look and feel just like the popular Facebook social network. The user can post an image along with descriptive text.
+In this project, we build a social media app that has Google authentication. The app looks and feels just like the popular Facebook social network. The user can post an image along with the descriptive text.
