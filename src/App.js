@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import Header from './components/header.component';
 import './App.css';
 
 function App() {
   return (
     <AppWrapper>
-      <h1>Popular Social Network MERN 🚀</h1>
+      <Header />
     </AppWrapper>
   );
 }
