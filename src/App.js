@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Header from './components/header.component';
 import Sidebar from './components/sidebar.component';
 import Feed from './components/feed.component';
+import Widget from './components/widget.component';
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <div className="app_body">
         <Sidebar />
         <Feed />
+        <Widget />
       </div>
     </AppWrapper>
   );
