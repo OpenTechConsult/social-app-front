@@ -1,11 +1,13 @@
 import React from 'react'
 import Stories from './stories.component'
+import Messenger from './messenger.component';
 import styled from 'styled-components';
 
 const Feed = () => {
     return (
         <FeedWrapper>
             <Stories />
+            <Messenger />
         </FeedWrapper>
     )
 }
