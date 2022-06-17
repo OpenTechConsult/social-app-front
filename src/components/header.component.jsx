@@ -11,9 +11,12 @@ import AddIcon from '@mui/icons-material/Add';
 import ForumIcon from '@mui/icons-material/Forum';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useStateValue } from "../StateProvider";
 
 
 const Header = () => {
+
+    const [{user}, dispatch] = useStateValue();
     return (
         <HeaderWrapper>
             <HeaderLeft>
@@ -42,8 +45,8 @@ const Header = () => {
             </HeaderCenter>
             <HeaderRight>
                 <div className="header__info">
-                    <Avatar src="https://scontent.facc6-1.fna.fbcdn.net/v/t39.30808-1/252856377_10223771526934221_4553746555895712662_n.jpg?stp=cp0_dst-jpg_p50x50&_nc_cat=110&ccb=1-7&_nc_sid=7206a8&_nc_eui2=AeEeDB3FFGfF01Xz7M6f9vwUmnSqHEpQtpKadKocSlC2ktJwONCF3sJp0yTy49nCJfM&_nc_ohc=q9ajddJMVTkAX-omxk0&_nc_ht=scontent.facc6-1.fna&oh=00_AT9Rx_roDq7Hp7BCNRioewvfV8Ah7Qy6PGMO0ivfykuFkQ&oe=62A85132" />
-                    <h4>Sandro</h4>
+                    <Avatar src={user.photoURL} />
+                    <h4>{user.displayName}</h4>
                     <IconButton aria-label="add">
                         <AddIcon />
                     </IconButton>
