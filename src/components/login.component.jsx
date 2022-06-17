@@ -2,9 +2,13 @@ import { Button } from '@mui/material';
 import React from 'react';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import firebaseApp from '../firebase';
+import { useStateValue } from '../StateProvider';
+import { actionTypes } from '../Reducer';
 import styled from 'styled-components';
 
 const Login = () => {
+
+    const [{ }, dispatch] = useStateValue();
 
     const signIn = () => {
         const provider = new GoogleAuthProvider();
@@ -13,6 +17,10 @@ const Login = () => {
             const credential = GoogleAuthProvider.credentialFromResult(result)
             const token = credential.accessToken;
             const user = result.user;
+            dispatch({
+                type: actionTypes.SET_USER,
+                user: user
+            });
             console.log(token, user);
         }).catch(error => {
             const errorCode = error.code;
